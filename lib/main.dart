@@ -5,13 +5,12 @@ void main() => runApp(MiApp());
 class MiApp extends StatelessWidget{
   const MiApp({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-	debugShowCheckedModeBanner: false,
-	title: "Mi App",
-      	home: Inicio(),
+      debugShowCheckedModeBanner: false,
+      title: "Mi App",
+      home: Inicio(),
     );
   }
 }
@@ -28,20 +27,27 @@ class _InicioState extends State<Inicio>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mi App"),
+        title: Text("Filas, Columnas y Botones"),
       ),
-       body: ListView(
-        children: [
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Image.network("https://st4.depositphotos.com/1130303/37937/v/450/depositphotos_379374964-stock-illustration-supercar-vector-file-format-separate.jpg"),
-            ),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Image.network("https://w7.pngwing.com/pngs/592/353/png-transparent-yellow-convertible-coupe-2015-lamborghini-aventador-2013-lamborghini-aventador-car-lamborghini-reventxf3n-yellow-lamborghini-aventador-car-computer-wallpaper-roadster-mode-of-transport.png"),
+      body: Center(
+        child: FloatingActionButton.large(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(Icons.access_time),
+              SizedBox(
+                width: 5,
+                ),
+              Text("NOW"),
+            ],
           ),
-        ],
+          onPressed: (){
+            var t = DateTime.now()  ;
+            print(t);
+          }
+          ),
       ),
     );
   }
 }
+
