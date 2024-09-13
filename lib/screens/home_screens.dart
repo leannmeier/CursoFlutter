@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Feed Cards'), backgroundColor: Colors.amber,),
-      body: const Center(child: Text('Separando Widgets'),),
+      body: Container(margin: const EdgeInsets.only(top:20), width: double.infinity, height: 350 ,decoration: const BoxDecoration(color: Colors.red), child: const Text("Hola"),),
       backgroundColor: Colors.grey[300],
       floatingActionButton: FloatingActionButton(onPressed: (){}, child: const Icon(Icons.add),),
     );
